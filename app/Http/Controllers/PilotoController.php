@@ -73,7 +73,7 @@ class PilotoController extends Controller
     public function show($id)
     {
         $Piloto = Piloto::find($id);
-        return response(['Piloto' => $Piloto], 200);
+        return response(['piloto' => $Piloto], 200);
     }
 
     /**
@@ -110,9 +110,9 @@ class PilotoController extends Controller
 
         $Piloto = Piloto::find($id);
         $Piloto->nombre = $data['nombre'];
-        $Piloto->malaise = $data['dpi'];
-        $Piloto->date = $data['licencia'];
-        $Piloto->date = $data['telefono'];
+        $Piloto->dpi = $data['dpi'];
+        $Piloto->licencia = $data['licencia'];
+        $Piloto->telefono = $data['telefono'];
         $Piloto->save();
         return response(['data' => 'Updated success'], 200);
     }

@@ -76,7 +76,7 @@ class VehiculoController extends Controller
     public function show($id)
     {
         $Vehiculo = Vehiculo::find($id);
-        return response(['Vehiculo' => $Vehiculo], 200);
+        return response(['vehiculo' => $Vehiculo], 200);
     }
 
     /**
